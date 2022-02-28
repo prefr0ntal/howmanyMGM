@@ -1,11 +1,12 @@
 let needpiece = [0, 50, 100, 200, 300];
 let nullObj = {};
+let n=[];
+let ps = [nullObj, two, three, four, five];
 addEventListener('load', listener);
 addEventListener('click', listener);
 addEventListener('keyup', listener);
-let ps = [nullObj, two, three, four, five];
 function listener() {
-  var n = Array(5).fill(0).map((v, i) => {
+  n = Array(5).fill(0).map((v, i) => {
       if (star.value <= 0 || i + 1 <= star.value) return 0;
       return needpiece.slice(star.value, i + 1).reduce((a, b) => a + b);
   });
@@ -39,7 +40,6 @@ function keisan(piece, lv, mpp, kk) {
     if (n[lv] <= piece) {
       var amari = n[lv] - piece;
       return mgm + (amari < -1 ? 1 : 0);
-      break;
     }
   }
 }
