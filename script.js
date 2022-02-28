@@ -14,6 +14,7 @@ function listener() {
     });
   ps.forEach((v, i) => {
     let num = piece.value - 0;
+    if(num<0)return v.innerText=0
     if (isNaN(num)) num = 0;
     let namb=n[i] - num
     v.innerText = namb<0?0:namb;
