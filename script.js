@@ -5,7 +5,7 @@ addEventListener('click', listener);
 addEventListener('keyup', listener);
 let ps = [nullObj, two, three, four, five];
 function listener() {
-  let n = Array(5).fill(0).map((v, i) => {
+  var n = Array(5).fill(0).map((v, i) => {
       if (star.value <= 0 || i + 1 <= star.value) return 0;
       return needpiece.slice(star.value, i + 1).reduce((a, b) => a + b);
   });
