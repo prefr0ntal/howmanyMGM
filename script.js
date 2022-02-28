@@ -28,6 +28,7 @@ function keisan(piece, lv, mpp, kk) {
   if ([lv, mpp, kk].some((v) => isNaN(v))) return;
   if (isNaN(piece)) piece = 0;
   if (n[lv] == 0) return 0;
+  if (n[lv] <= piece) return 0
   let mgm = 0;
   let gag = 0;
   while (true) {
