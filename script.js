@@ -1,4 +1,3 @@
-let inps = [...document.querySelectorAll('input')];
 let needpiece = [0, 50, 100, 200, 300];
 let nullObj = {};
 let n;
@@ -16,7 +15,8 @@ function listener() {
   ps.forEach((v, i) => {
     let num = piece.value - 0;
     if (isNaN(num)) num = 0;
-    v.innerText = n[i] - num;
+    let namb=n[i] - num
+    v.innerText = namb<0?0:namb;
   });
   [nullObj, retwo, rethree, refour, refive].forEach((v, i) => {
     if ([piece.value, i, mpp.value, k.value].some((v) => v == '')) return;
