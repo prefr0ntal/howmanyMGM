@@ -13,7 +13,7 @@ function listener() {
     let num = piece.value - 0;
     if(num<0)return v.innerText=0
     if (isNaN(num)) num = 0;
-    v.innerText =(n[i]-num<0?)0:n[i]-num;
+    v.innerText =(n[i]-num<0)?0:n[i]-num;
   });
   [nullObj, retwo, rethree, refour, refive].forEach((v, i) => {
     if ([piece.value, i, mpp.value, k.value].some((v) => v == '')) return;
